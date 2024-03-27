@@ -1,0 +1,63 @@
+#motionPath {
+    display: flex;
+    justify-content: center;
+    height: 1200px;
+    width: 1200px;
+  }
+  
+  .motion-path {
+    position: relative;
+    height: 1000px;
+  }
+  
+  .circuit {
+    width: 100%;
+    height: 100%;
+  }
+
+  .car1 {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    top: -9px;
+    left: -9px;
+    z-index: 99999;
+    color: yellow;
+  }
+
+  .car2 {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 30px;
+    top: -9px;
+    left: -9px;
+    z-index: 99999;
+  }
+  
+  .car3 {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    top: -9px;
+    left: -9px;
+    z-index: 99999;
+  }
+
+  .car1 img {
+    transform: scalex(-1);
+    width: 100%;
+    height: 100%;
+  }
+
+  .car2 img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .car3 img {
+    width: 100%;
+    height: 100%;
+  }

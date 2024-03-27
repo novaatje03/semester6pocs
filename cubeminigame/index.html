@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3x3 Cube</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="navbar">
+  <div class="counter" style="border: 3px solid black"><h1>Aantal zetten:</h1><span id="swap-counter"><h2>0</h2></span></div>
+  <button onclick="toggle(this)" class="info" style="border: 3px solid black" id="popup"><h2>i</h2></button>
+  </div>
+  <span id="myspan" class="uitleg" style="border: 3px solid black"><h1 style="text-align: center;">Dit is de uitleg van het spel:</h1><p style="padding-left: 10px; padding-right: 10px;">Je kan de kubus draaien door<br>op de kubus je muis
+  in te klikken en dan met je muis te slepen. <br><br>Om de puzzel op te lossen moet je telkens op twee vakjes klikken om ze van plaats te laten wisselen.<br><br>
+  Zodra op elke zijde alle 9 vlakjes dezelfde kleur hebben, heb je de puzzel opgelost!</p></span>
+
+</div>
+  <div class="cube-container">
+    <div class="cube" id="cube">
+      <!-- Front -->
+      <div class="face front">
+        <div class="inner-face" style="background-color: #78DCE3;"></div>
+        <div class="inner-face" style="background-color: #78DCE3;"></div>
+        <div class="inner-face" style="background-color: #78DCE3;"></div>
+        <div class="inner-face" style="background-color: #78DCE3;"></div>
+        <div class="inner-face" style="background-color: #78DCE3;"></div>
+        <div class="inner-face" style="background-color: #78DCE3;"></div>
+        <div class="inner-face" style="background-color: #78DCE3;"></div>
+        <div class="inner-face" style="background-color: #78DCE3;"></div>
+        <div class="inner-face" style="background-color: #78DCE3;"></div>
+      </div>
+      <!-- Back -->
+      <div class="face back">
+        <div class="inner-face" style="background-color: #CA2525;"></div>
+        <div class="inner-face" style="background-color: #CA2525;"></div>
+        <div class="inner-face" style="background-color: #CA2525;"></div>
+        <div class="inner-face" style="background-color: #CA2525;"></div>
+        <div class="inner-face" style="background-color: #CA2525;"></div>
+        <div class="inner-face" style="background-color: #CA2525;"></div>
+        <div class="inner-face" style="background-color: #CA2525;"></div>
+        <div class="inner-face" style="background-color: #CA2525;"></div>
+        <div class="inner-face" style="background-color: #CA2525;"></div>
+      </div>
+      <!-- Right -->
+      <div class="face right">
+        <div class="inner-face" style="background-color: #38C614;"></div>
+        <div class="inner-face" style="background-color: #38C614;"></div>
+        <div class="inner-face" style="background-color: #38C614;"></div>
+        <div class="inner-face" style="background-color: #38C614;"></div>
+        <div class="inner-face" style="background-color: #38C614;"></div>
+        <div class="inner-face" style="background-color: #38C614;"></div>
+        <div class="inner-face" style="background-color: #38C614;"></div>
+        <div class="inner-face" style="background-color: #38C614;"></div>
+        <div class="inner-face" style="background-color: #38C614;"></div>
+      </div>
+      <!-- Left -->
+      <div class="face left">
+        <div class="inner-face" style="background-color: #FFEA31;"></div>
+        <div class="inner-face" style="background-color: #FFEA31;"></div>
+        <div class="inner-face" style="background-color: #FFEA31;"></div>
+        <div class="inner-face" style="background-color: #FFEA31;"></div>
+        <div class="inner-face" style="background-color: #FFEA31;"></div>
+        <div class="inner-face" style="background-color: #FFEA31;"></div>
+        <div class="inner-face" style="background-color: #FFEA31;"></div>
+        <div class="inner-face" style="background-color: #FFEA31;"></div>
+        <div class="inner-face" style="background-color: #FFEA31;"></div>
+      </div>
+      <!-- Top -->
+      <div class="face top">
+        <div class="inner-face" style="background-color: #BE7DFF;"></div>
+        <div class="inner-face" style="background-color: #BE7DFF;"></div>
+        <div class="inner-face" style="background-color: #BE7DFF;"></div>
+        <div class="inner-face" style="background-color: #BE7DFF;"></div>
+        <div class="inner-face" style="background-color: #BE7DFF;"></div>
+        <div class="inner-face" style="background-color: #BE7DFF;"></div>
+        <div class="inner-face" style="background-color: #BE7DFF;"></div>
+        <div class="inner-face" style="background-color: #BE7DFF;"></div>
+        <div class="inner-face" style="background-color: #BE7DFF;"></div>
+      </div>
+      <!-- Bottom -->
+      <div class="face bottom">
+        <div class="inner-face" style="background-color: #ff9420;"></div>
+        <div class="inner-face" style="background-color: #ff9430;"></div>
+        <div class="inner-face" style="background-color: #ff9430;"></div>
+        <div class="inner-face" style="background-color: #ff9430;"></div>
+        <div class="inner-face" style="background-color: #ff9430;"></div>
+        <div class="inner-face" style="background-color: #ff9430;"></div>
+        <div class="inner-face" style="background-color: #ff9430;"></div>
+        <div class="inner-face" style="background-color: #ff9430;"></div>
+        <div class="inner-face" style="background-color: #ff9430;"></div>
+      </div>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
