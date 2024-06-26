@@ -26,9 +26,11 @@ document.addEventListener('DOMContentLoaded', function () {
     
     const infoButton = document.getElementById("popup");
     infoButton.addEventListener("click", toggleInfo);
+    let sidesUnique = false;
+    let sidesSameColor = false;
     
     // Voer toggleInfo() uit bij het laden van de pagina om ervoor te zorgen dat de uitleg verborgen is
-    toggleInfo();
+    // toggleInfo();
 
     function checkPuzzleSolved() {
         // Array om de kleuren van elke zijde op te slaan
@@ -47,19 +49,30 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Controleer of elke zijde uniek is
-        let sidesUnique = colors.every((side, index) => {
+        sidesUnique = colors.every((side, index) => {
+            console.log(sidesUnique);
             return colors.indexOf(side) === index;
         });
+        
+        // console.log(sidesUnique);
 
         // Controleer of elke zijde dezelfde kleur heeft
-        let sidesSameColor = colors.every(side => {
+        sidesSameColor = colors.every(side => {
+            console.log(sidesSameColor);
             return side.every(color => color === side[0]);
         });
 
         // Als elke zijde uniek is en dezelfde kleur heeft, is de puzzel opgelost
         if (sidesUnique && sidesSameColor) {
             showPopupMessage();
+            puzzleFinished();
+            console.log("Puzzle opgelost");
         }
+    }
+
+    function puzzleFinished() {
+        var puzzleFinished = document.getElementById("puzzleSolved");
+        puzzleFinished.style.display = "block";
     }
 
     function shuffle(array) {
@@ -154,17 +167,17 @@ document.addEventListener('DOMContentLoaded', function () {
     cube.addEventListener('transitionstart', function (event) {
         if (event.propertyName === 'transform') {
             cube.classList.add('rotating');
-            cube.style.pointerEvents = 'none'; // Disable mouse events during rotation
+            cube.style.pointerEvents = 'none'; 
         }
     });
 
     cube.addEventListener('transitionend', function (event) {
         if (event.propertyName === 'transform') {
             cube.classList.remove('rotating');
-            cube.style.pointerEvents = 'auto'; // Enable mouse events after rotation
+            cube.style.pointerEvents = 'auto'; 
         }
     });
 
-    // Shuffle faces on page load
+    // Shuffle vlakken op pagina load
     shuffle(innerFaces);
 });

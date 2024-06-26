@@ -55,7 +55,7 @@ body
   font-size: 20px;
   border-radius: 20px;
   box-shadow: 5px 5px;
-  height: 300px;
+  height: 400px;
   width: 350px;
   padding-top: 10px;
   display: none;
@@ -125,3 +125,17 @@ h2
   transform: rotateX(-90deg) translateZ(100px); 
 }
 
+#puzzleSolved {
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  margin-right: 40px;
+  font-family:sans-serif;
+  font-size: 20px;
+  color: black;
+  border-radius: 20px;
+  box-shadow: 5px 5px;
+  margin-left: 20px;
+}
